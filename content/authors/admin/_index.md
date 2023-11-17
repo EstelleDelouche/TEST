@@ -113,26 +113,26 @@ skills:
     color: '#eeac02'
     color_border: '#f0bf23'
     items:
-      - name: Hiking
+      - name: Running/Trail
         description: ''
-        percent: 60
+        percent: 70
         icon: person-simple-walk
-      - name: Cats
+      - name: Cooking
         description: ''
         percent: 100
-        icon: cat
-      - name: Photography
+        icon: cook
+      - name: Dancing
         description: ''
         percent: 80
-        icon: camera
+        icon: music-note
 
 languages:
   - name: English
     percent: 100
-  - name: Chinese
-    percent: 75
-  - name: Portuguese
-    percent: 25
+  - name: French
+    percent: 100
+  - name: Spanish
+    percent: 65
 
 # Awards.
 #   Add/remove as many awards below as you like.
@@ -167,5 +167,4 @@ awards:
 ---
 
 Passionate about developing and implementing innovative solutions, I have a strong background in data processing, physics, mathematics and Machine Learning!
-
 {style="text-align: justify; font-size: 0.8em;"}

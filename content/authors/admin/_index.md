@@ -29,9 +29,6 @@ organizations:
 social:
   - icon: at-symbol
     link: 'estelle.delouche@gmail.com'
-  # - icon: x
-  #   link: https://twitter.com/GetResearchDev
-    # label: Follow me on Twitter
   - icon: github
     link: https://github.com/EstelleDelouche
   - icon: linkedin
@@ -169,5 +166,6 @@ awards:
       Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-Passionate about developing and implementing innovative solutions, I specialize in data processing, physics, mathematics and Machine Learning!
+Passionate about developing and implementing innovative solutions, I have a strong background in data processing, physics, mathematics and Machine Learning!
+
 {style="text-align: justify; font-size: 0.8em;"}

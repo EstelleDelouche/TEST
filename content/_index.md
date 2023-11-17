@@ -30,7 +30,7 @@ sections:
       username: admin
   - block: awards
     content:
-      title: Awards
+      title: Scientific Blog
       username: admin
   - block: languages
     content:

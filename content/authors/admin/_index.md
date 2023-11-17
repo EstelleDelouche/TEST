@@ -11,8 +11,8 @@ last_name: Delouche
 
 # Status emoji
 status:
-  icon: ☕️
-
+  icon: 🥖
+  
 # Is this the primary user of the site?
 superuser: true
 
@@ -100,15 +100,15 @@ skills:
       - name: Python
         description: ''
         percent: 80
-        icon: code-bracket
+        icon: python2
       - name: Data Science
         description: ''
         percent: 100
-        icon: chart-bar
-      - name: SQL
+        icon: stats
+      - name: Machine Learning
         description: ''
-        percent: 40
-        icon: circle-stack
+        percent: 90
+        icon: tete_ml
   - name: Hobbies
     color: '#eeac02'
     color_border: '#f0bf23'
@@ -116,7 +116,7 @@ skills:
       - name: Running/Trail
         description: ''
         percent: 70
-        icon: person-simple-walk
+        icon: run
       - name: Cooking
         description: ''
         percent: 100
@@ -124,7 +124,7 @@ skills:
       - name: Dancing
         description: ''
         percent: 80
-        icon: music-note
+        icon: music 
 
 languages:
   - name: English

@@ -1,13 +1,13 @@
 ---
 # Display name
-title: 吳健雄
+title: Estelle Delouche
 
 # Name pronunciation (optional)
-name_pronunciation: Chien Shiung Wu
+name_pronunciation: 
 
 # Full name (for SEO)
-first_name: Shiung Wu
-last_name: Chien
+first_name: Estelle
+last_name: Delouche
 
 # Status emoji
 status:
@@ -17,27 +17,27 @@ status:
 superuser: true
 
 # Role/position/tagline
-role: Director of Cloud Infrastructure
+role: Machine Learning - Python Engineer
 
 # Organizations/Affiliations to display in About block
 organizations:
-  - name: GenCoin
-    url: https://www.example.com/
+  - name: 
+    url: 
 
 # Social network links
 # Need to use another icon? Simply download the SVG icon to your `assets/media/icons/` folder.
 social:
   - icon: at-symbol
-    link: 'mailto:your-email@example.com'
-  - icon: x
-    link: https://twitter.com/GetResearchDev
-    label: Follow me on Twitter
+    link: 'estelle.delouche@gmail.com'
+  # - icon: x
+  #   link: https://twitter.com/GetResearchDev
+    # label: Follow me on Twitter
   - icon: github
-    link: https://github.com/gcushen
+    link: https://github.com/EstelleDelouche
   - icon: linkedin
-    link: https://www.linkedin.com/
+    link: https://www.linkedin.com/in/estelle-delouche/
   - icon: instagram
-    link: https://www.instagram.com/
+    link: https://www.instagram.com/estelle.dlch/
 
 education:
   - area: PhD Artificial Intelligence
@@ -48,7 +48,7 @@ education:
       Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
     button:
       label: 'Read Thesis'
-      url: 'https://example.com'
+      url: ''
   - area: MEng Artificial Intelligence
     institution: Massachusetts Institute of Technology
     date_start: 2016-01-01
@@ -169,5 +169,5 @@ awards:
       Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
 ---
 
-I am currently Director of Cloud Infrastructure at GenCoin where I am leading teams on edge computing, deep sea data center architecture, and hivemind optimization.
+Passionate about developing and implementing innovative solutions, I specialize in data processing, physics, mathematics and Machine Learning!
 {style="text-align: justify; font-size: 0.8em;"}

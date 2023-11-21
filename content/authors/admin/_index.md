@@ -37,7 +37,7 @@ social:
     link: https://www.instagram.com/estelle.dlch/
 
 education:
-  - area: PhD in Physics
+  - area: PhD in Geophysics
     institution: University Grenoble Alpes
     date_start: 2019-09-01
     date_end: 2023-05-31
@@ -86,7 +86,7 @@ work:
       Responsibilities include:
       - development of Supervised and Unsupervised Machine Learning algorithms to separate and locate volcanic sources
       - determination of the long-term evolution of water resources at European scale
-  - position: PhD in physics 
+  - position: PhD in Geophysics 
     company_name: University Grenoble Alpes - ISTerre 
     company_url: ''
     company_logo: ''

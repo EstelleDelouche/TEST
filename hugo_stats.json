@@ -1,7 +1,6 @@
 {
   "htmlElements": {
     "tags": [
-      "3</span",
       "?xml",
       "a",
       "article",
@@ -23,7 +22,6 @@
       "line",
       "link",
       "meta",
-      "metadata",
       "ol",
       "p",
       "path",
@@ -110,10 +108,7 @@
       "h-6",
       "h-7",
       "h-[24px]",
-      "h-[32px]",
-      "h-[36px]",
       "h-[48px]",
-      "h-[60px]",
       "hbb-section",
       "home-section-bg",
       "hover:bg-gray-100",
@@ -217,10 +212,7 @@
       "w-6",
       "w-7",
       "w-[24px]",
-      "w-[32px]",
-      "w-[36px]",
       "w-[48px]",
-      "w-[60px]",
       "w-full",
       "wg-about-avatar",
       "wg-awards",
@@ -239,8 +231,7 @@
       "section-experience",
       "section-languages",
       "section-skills",
-      "sun",
-      "surface1"
+      "sun"
     ]
   }
 }

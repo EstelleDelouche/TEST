@@ -37,60 +37,87 @@ social:
     link: https://www.instagram.com/estelle.dlch/
 
 education:
-  - area: PhD Artificial Intelligence
-    institution: Stanford University
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: PhD in Physics
+    institution: University Grenoble Alpes
+    date_start: 2019-09-01
+    date_end: 2023-05-31
     summary: |
-      Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+      With honours 
+
+      Thesis on _Monitoring seismic velocity changes in the upper crust and aquifer dynamics_. Supervised by [Laurent Stehly](https://scholar.google.com/citations?user=VeMpdccAAAAJ&hl=fr). Presented papers at 6 international conferences with the contributions being published in 3 journals.
     button:
       label: 'Read Thesis'
       url: 'https://www.theses.fr/2023GRALU020'
-  - area: MEng Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+  - area: Master degree in Geophysics
+    institution: University Grenoble Alpes
+    date_start: 2017-09-01
+    date_end: 2019-06-30
     summary: |
-      GPA: 3.8/4.0
+      Pass of 70% to 80% (_Mention Bien_)
 
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - area: BSc Artificial Intelligence
-    institution: Massachusetts Institute of Technology
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+      - signal processing
+      - data analysis
+      - wave physics
+      - problem-solving
+      - statistics
+  - area: BSc Physics and Mathematics
+    institution: University of Nice-Sophia Antipolis
+    date_start: 2014-09-01
+    date_end: 2017-06-30
     summary: |
-      GPA: 3.4/4.0
+      Pass of 70% to 80% (_Mention Bien_)
       
       Courses included:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - geophysics
+      - mathematics
+      - physics
+      - algebra
+      - thermodynamics
+      - mechanics
 work:
-  - position: Director of Cloud Infrastructure
-    company_name: GenCoin
+  - position: Post-doctoral Researcher
+    company_name: University Grenoble Alpes - ISTerre
     company_url: ''
     company_logo: ''
-    date_start: 2021-01-01
-    date_end: ''
+    date_start: 2023-06-01
+    date_end: 2023-10-31
     summary: |2-
       Responsibilities include:
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - position: Backend Software Engineer
-    company_name: X
+      - development of Supervised and Unsupervised Machine Learning algorithms to separate and locate volcanic sources
+      - determination of the long-term evolution of water resources at European scale
+  - position: PhD in physics 
+    company_name: University Grenoble Alpes - ISTerre 
     company_url: ''
     company_logo: ''
-    date_start: 2016-01-01
-    date_end: 2020-12-31
+    date_start: 2019-09-01
+    date_end: 2023-05-31
     summary: |
       Responsibilities include:
-      - Migrated infrastructure to a new data center
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
-      - lorem ipsum dolor sit amet, consectetur adipiscing elit
+      - creation of signal processing software in Python and Matlab
+      - software development to model and predict the water ﬂuctuations inside aquifer systems
+      - performing a wave sensitivity study at depth using ’Surf96’
+      - Big Data management: GPS, Satellite (GRACE), precipitation and seismic data at European scale
+      - supporting global RISE project for real-time earthquake risk reduction
+      - presentations and reports writing
+  - position: Internships 
+    company_name: University Grenoble Alpes & CNRS Sophia Antipolis
+    company_url: ''
+    company_logo: ''
+    date_start: ''
+    date_end: ''
+    summary: |
+      Image recognition with ML (January 2019 - July 2019): Supervised by [Marielle Malfante](https://www.linkedin.com/in/marielle-malfante-214a9688/?originalSubdomain=fr), [Jerome Mars](https://www.linkedin.com/in/jerome-mars-59049353/?originalSubdomain=fr) and [Mauro Dalla Mura](https://www.grenoble-inp.fr/fr/recherche-valorisation/mauro-dalla-mura-nouveau-membre-de-liuf)
+      - creation of a machine learning-based automated system to discriminate the resting, precursory and post-seismic phases of an earthquake 
+      - time series and images recognition
+
+
+      Statistical study of earthquake signals (May 2018 - June 2018):
+      - Characterization of the co-seismic impact of noise recordings for l'Aquila and Amatrice earthquakes using statitical moments
+
+      Co-seismic deformation (December 2016 - January 2017)
+      - Evaluation of the co-seismic displacement of submarines area during Pedernales event
+      
 
 # Skills
 # Add your own SVG icons to `assets/media/icons/`

@@ -28,8 +28,10 @@ sections:
     content:
       title: Skills & Hobbies
       username: admin
+  - block: awards
+    content:
+      title: Scientific Blog
   #    username: admin
-  #what i change to add blogs
   - block: collection
     id: posts
     content:

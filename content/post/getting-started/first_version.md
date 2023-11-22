@@ -48,7 +48,7 @@ import libr
 print('hello')
 ``` -->
 
-## Objectives
+## Overview
 The goal is to predict the lower half of a face given its upper half.
 
 The first column of images shows true faces. The next columns illustrate how extremely randomized trees, k nearest neighbors, linear regression, Random Forest and ridge regression complete the lower half of those faces.
@@ -56,14 +56,9 @@ The first column of images shows true faces. The next columns illustrate how ext
 Code available on [sklearn](https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_multioutput_face_completion.html#sphx-glr-auto-examples-miscellaneous-plot-multioutput-face-completion-py)
 
 
-The dataset is composed of 400 pictures of 40 people. For the image shown in introduction of this post, the training set has been composed of 300 images while the testing set is about 100 images. 
-Meaning the different faces are being reconstructed using an average of women and men faces. 
+## Crowd-funded open-source software
 
-Let's see if we can reconstruct better the face of one person using different pictures of him.
-
-
-![jpg](true_man_face.jpg)
-
+To help us develop this template and software sustainably under the MIT license, we ask all individuals and businesses that use it to help support its ongoing maintenance and development via sponsorship.
 
 ### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://hugoblox.com/sponsor/)
 

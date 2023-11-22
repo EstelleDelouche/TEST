@@ -56,43 +56,51 @@ The first column of images shows true faces. The next columns illustrate how ext
 Code available on [sklearn](https://scikit-learn.org/stable/auto_examples/miscellaneous/plot_multioutput_face_completion.html#sphx-glr-auto-examples-miscellaneous-plot-multioutput-face-completion-py)
 
 
-The dataset is composed of 400 pictures of 40 people. For the image shown in introduction of this post, the training set has been composed of 300 images while the testing set is about 100 images. 
+The dataset is composed of 400 pictures (64x64 pixels) of 40 people. For the image shown in introduction of this post, the training set has been composed of 300 images while the testing set is about 100 images. 
 Meaning the different faces are being reconstructed using an average of women and men faces. 
 
-Let's see if we can reconstruct better the face of one person using different pictures of him.
+## My contribution 
+
+ **My codes - not on sklearn** 
+
+Let's see if we can reconstruct better the face of one person using only different pictures of him.
 
 
 ![jpg](true_man_face.jpg)
 
+On this image, you can see 10 pictures on the same man in different positions. We are going to train the algorithms on 7 images (-Train set-) using extremely randomized trees, k nearest neighbors, linear regression, Random Forest and ridge regression. 
 
-### [❤️ Click here to become a sponsor and help support Wowchemy's future ❤️](https://hugoblox.com/sponsor/)
-
-As a token of appreciation for sponsoring, you can **unlock [these](https://hugoblox.com/sponsor/) awesome rewards and extra features 🦄✨**
-
-## Ecosystem
-
-- **[Hugo Academic CLI](https://github.com/GetRD/academic-file-converter):** Automatically import publications from BibTeX
-
-## Inspiration
-
-[Check out the latest **demo**](https://academic-demo.netlify.com/) of what you'll get in less than 10 minutes, or [view the **showcase**](https://hugoblox.com/user-stories/) of personal, project, and business sites.
-
-## Features
-
-- **Page builder** - Create _anything_ with [**widgets**](https://docs.hugoblox.com/page-builder/) and [**elements**](https://docs.hugoblox.com/content/writing-markdown-latex/)
-- **Edit any type of content** - Blog posts, publications, talks, slides, projects, and more!
-- **Create content** in [**Markdown**](https://docs.hugoblox.com/content/writing-markdown-latex/), [**Jupyter**](https://docs.hugoblox.com/import/jupyter/), or [**RStudio**](https://docs.hugoblox.com/install-locally/)
-- **Plugin System** - Fully customizable [**color** and **font themes**](https://docs.hugoblox.com/customization/)
-- **Display Code and Math** - Code highlighting and [LaTeX math](https://en.wikibooks.org/wiki/LaTeX/Mathematics) supported
-- **Integrations** - [Google Analytics](https://analytics.google.com), [Disqus commenting](https://disqus.com), Maps, Contact Forms, and more!
-- **Beautiful Site** - Simple and refreshing one page design
-- **Industry-Leading SEO** - Help get your website found on search engines and social media
-- **Media Galleries** - Display your images and videos with captions in a customizable gallery
-- **Mobile Friendly** - Look amazing on every screen with a mobile friendly version of your site
-- **Multi-language** - 34+ language packs including English, 中文, and Português
-- **Multi-user** - Each author gets their own profile page
-- **Privacy Pack** - Assists with GDPR
-- **Stand Out** - Bring your site to life with animation, parallax backgrounds, and scroll effects
-- **One-Click Deployment** - No servers. No databases. Only files.
+Then, the half part of the Test set is going to be reconstructed.
 
 
+## Results on man faces
+
+![jpg](man_face.jpg)
+
+The image shows the results of the predictions for several regressors. For the two first lines, the faces seem to be relatively well reconsctructed. While for the last one, the features don't converge to the true face. 🧐
+
+Indeed, the "open-mouth" feature is not represented at all within the train set. The algorithms didn't get the chance to learn from it, and thus, can't converge to the exact solution! 
+
+Moreover, we can retrieve with a great accuracy the beard 🧔🏻 which is absolutely inexistant in the first picture of this post (last line)!! 
+
+
+
+
+## What about woman faces?
+
+![jpg](woman_face.jpg)
+
+Except for some algorithms like linear regression and ridge which don't help to reconstruct the woman face really well, we can say in average that the algorithms are working great. 
+
+
+## Conclusion
+
+- The separation of training and test is extremely important in ML, normally it is about **70/80%** for the **training set** and **20/30%** for the **testing one**!
+
+- As we have seen in this post, the reconstruction of faces can be **really impressive**! In general, the more examples, the better! (if the algorithms have never seen beard or an open mouth it will be difficult to predict them!)
+
+- The **algorithms** used for the face completion are also **decisive** to obtained the best results! I may avoid to use a linear regression in this example 🥲
+
+
+
+👋👋👋👋

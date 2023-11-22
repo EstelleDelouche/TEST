@@ -93,7 +93,7 @@ Moreover, we can retrieve with a great accuracy the beard 🧔🏻 which is abso
 Except for some algorithms like linear regression and ridge which don't help to reconstruct the woman face really well, we can say in average that the algorithms are working great. 
 
 
-## Conclusion
+## Conclusions
 
 - The separation of training and test is extremely important in ML, normally it is about **70/80%** for the **training set** and **20/30%** for the **testing one**!
 

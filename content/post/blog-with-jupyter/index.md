@@ -1,34 +1,78 @@
 ---
-title: Blog with Jupyter Notebooks!
-date: '2023-11-04'
-summary: Easily blog from Jupyter notebooks!
+title: Number recognition with K-NN
+date: '2023-11-23'
+summary: Number recognition with the K-nn classifier!
 ---
 
+# Objective
+
+The aim of this dataset is to enable a computer to learn how to recognize handwritten numbers automatically. This is particularly useful for scanning information in handwritten documents or for reading cheques, for example.
 
 ```python
-from IPython.core.display import Image
-Image('https://www.python.org/static/community_logos/python-logo-master-v3-TM-flattened.png')
+from sklearn.datasets import fetch_openml
 ```
-
+The dataset is composed of 7000 B&W images (28x28 pixels) with numbers from 0 to 9.
     
 ![png](output_1_0.png)
     
 
+## How do we do that?
+
+In the following, we are going to use the K-NN classifier, or k-nearest neighbors classifier. The k (hyperparameter) refers to the number of centroids.
+
 ```python
-print("Welcome to Academic!")
+# Separate the train from the test dataset
+xtrain, xtest, ytrain, ytest = train_test_split(sampled_data,sampled_target, train_size=0.8)
+
+# Classifier K-NN 
+knn = neighbors.KNeighborsClassifier(n_neighbors=3) # k=3
+knn.fit(xtrain,ytrain)
+
+ERROR = 1-knn.score(xtest,ytest)
+
+print(ERROR)
 ```
 
-    Welcome to Academic!
 
-## Organize your notebooks
 
-Place the notebooks that you would like to publish in a `notebooks` folder at the root of your website.
+    0.07071428571428573
 
-## Import the notebooks into your site
+In that example, I use a training data set equals to 80% of the dataset, meaning that the testing set is about 20%. Also, I choose an random value of "k" = 3.
 
-```bash
-pipx install academic
-academic import 'notebooks/**.ipynb' content/post/ --verbose
+The result indicates a really low error → the algorithm arrives to predict the numbers!
+
+## Is k=3 the best hyperparameter?
+
+**Optimisation of the hyperparameter "k"**
+
+To find the best parameter, we can test all the value of k between 2 and 15 and plot the error.
+
+```python
+errors = []
+
+for k in range(2,16):
+    knn = neighbors.KNeighborsClassifier(k)
+    
+    errors.append(1-knn.fit(xtrain,ytrain).score(xtest,ytest))
+
 ```
+![jpg](K_NN_clustering_numbers_v2.jpg)
 
-The notebooks will be published to the folder you specify above. In this case, they will be published to your `content/post/` folder.
+The lowest the value, the better the predictions!!
+In this example, "k"= 3 indicates the lowest error.
+
+## The results
+
+**Some examples of good predictions and bad predictions**
+
+![jpg](Examples_gb_predictions_KNN.jpg)
+
+
+
+## Conclusions
+
+- By using a **simple algorithm**, the machine can learn how to classify the handwritten numbers.
+
+- **Implementing a grid search** is often the best solution to determine the best parameters or hyperparameters of our algorithms. This include a **trade-off between computation time and quality** of the results! Is it really necessary to lower the error of 0.1% if the computation time increases of 50%? 
+
+👋👋👋👋

@@ -1,392 +1,123 @@
 ---
-title: Random Forest to classify the wines 🍷
-date: 2019-07-12
+title: Random Forest to classify different wines 🍷
+subtitle: Classification of wines using Random Forest Classifier 🌲
+
+# Summary for listings and search engines
+summary: Classification of wines using Random Forest Classifier 🌲
+date: 2023-11-26
 math: true
 image:
   placement: 2
-  caption: 'Image credit: Estelle Delouche'
+  caption: 'Image credit: Amazonian Forest: Puerto Nariño - by Estelle Delouche'
 ---
 
-Random Forest is based on binary decision trees. A decision tree is a graphical visualization in the form of a treea series of decisions / possibilities. A Random Forest makes it possible to give a probability to each decision: by knowing the probability at each node of the tree, it is possible to calculate a probability for each result, each "path" followed by the tree (Fig.18). The objective is to be able to make a prediction on new data in order to assign them a membership (a class) by knowing only the modalities of the features. Our machine learning model will build a decision tree based on existing data, assigning a probability to each path/exit point combination. For example, and randomly, if the probability of following a certain path is 80% for label ‘C’, each observation that follows this path
-will be assigned this label (majority voting). It is a simple algorithm to implement, in the sense that a Random Forest combines regression and classification. There is also less chance of overfitting.
 
-**Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.**
+## About Random Forest Classifier
 
-On this page, you'll find some examples of the types of technical content that can be rendered with Wowchemy.
+Random Forest is based on binary decision trees. A decision tree is a graphical visualization in the form of a tree of a series of decisions / possibilities. A Random Forest makes it possible to give a probability to each decision: by knowing the probability at each node of the tree, it's feasible to calculate a probability for each result, each "path" followed by the tree. 
 
-## Examples
+The objective is to be able to make a prediction on new data in order to assign them a membership (a class) by knowing only the modalities of the features. Our machine learning model will build a decision tree based on existing data, assigning a probability to each path/exit point combination. For example, and randomly, if the probability of following a certain path is 80% for label ‘Red wine’, each observation that follows this path will be assigned this label (majority voting). It is a simple algorithm to implement, in the sense that a Random Forest combines regression and classification. There is also less chance of overfitting.
 
-![png](tree_10depth.png)
+**In this post, we are going to see how to use the sklearn random forest classifier to distinguish two categories of wine.**
 
+
+## Dataset and Classification
+
+The dataset can be downloaded [here](https://www.stat4decision.com/wine_data.csv). It is composed of 13 features for 6497 samples each. The objective is to predict the **type** (number 12) of wine according to the other 12 features (from 0 to 11).
+![png](data_columns.png)
 
 
 ### Code
 
-Wowchemy supports a Markdown extension for highlighting code syntax. You can customize the styles under the `syntax_highlighter` option in your `config/_default/params.yaml` file.
+As usual, we separate our dataset into a training and a testing set using the **train_test_split** function from **sklearn.model_selection**.
 
-    ```python
-    import pandas as pd
-  
-    data.head()
-    ```
-
-renders as
-
-```python
-import pandas as pd
-
-data.head()
+```
+x_train , x_test, y_train, y_test = train_test_split(x,y, train_size=0.7, random_state=0)
 ```
 
-### Mindmaps
 
-Wowchemy supports a Markdown extension for mindmaps.
+### Random Forest Classifier
 
-Simply insert a Markdown `markmap` code block and optionally set the height of the mindmap as shown in the example below.
+Selection of the hyperparameters and definition of the random forest classifier. 
 
-A simple mindmap defined as a Markdown list:
-
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap {height="200px"}
-- Hugo Modules
-  - wowchemy
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
 ```
-</code>
-</pre>
-</div>
+clf = RandomForestClassifier(
+     n_estimators=50, # number of tree in our forest
+     criterion='gini', # criterium used : calculates the amount of probability of a specific feature that is classified incorrectly when selected randomly
+     max_depth=None, # number of nivels in the tree
+     min_samples_split=2,# Minimal number of samples in a leaf to do a separation
+     min_samples_leaf=1, # Minimal number of samples to create a leaf
+     min_weight_fraction_leaf=0.0, 
+     max_features='auto',
+     max_leaf_nodes=None,
+     min_impurity_decrease=0.0,
+     bootstrap=True,# if false, the same sample is used
+     oob_score=False,
+     n_jobs=None,
+     random_state=None,
+     verbose=0,
+     warm_start=False,
+     class_weight=None,
+     ccp_alpha=0.0,
+     max_samples=None,)
 
-renders as
-
-```markmap {height="200px"}
-- Hugo Modules
-  - wowchemy
-  - blox-plugins-netlify
-  - blox-plugins-netlify-cms
-  - blox-plugins-reveal
+clf.fit(x_train, y_train)
 ```
 
-A more advanced mindmap with formatting, code blocks, and math:
-
-<div class="highlight">
-<pre class="chroma">
-<code>
-```markmap
-- Mindmaps
-  - Links
-    - [Wowchemy Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-</code>
-</pre>
-</div>
-
-renders as
-
-```markmap
-- Mindmaps
-  - Links
-    - [Wowchemy Docs](https://docs.hugoblox.com/)
-    - [Discord Community](https://discord.gg/z8wNYzb)
-    - [GitHub](https://github.com/HugoBlox/hugo-blox-builder)
-  - Features
-    - Markdown formatting
-    - **inline** ~~text~~ *styles*
-    - multiline
-      text
-    - `inline code`
-    -
-      ```js
-      console.log('hello');
-      console.log('code block');
-      ```
-    - Math: $x = {-b \pm \sqrt{b^2-4ac} \over 2a}$
-```
-
-### Charts
-
-Wowchemy supports the popular [Plotly](https://plot.ly/) format for interactive charts.
-
-Save your Plotly JSON in your page folder, for example `line-chart.json`, and then add the `{{</* chart data="line-chart" */>}}` shortcode where you would like the chart to appear.
-
-Demo:
-
-{{< chart data="line-chart" >}}
-
-You might also find the [Plotly JSON Editor](http://plotly-json-editor.getforge.io/) useful.
-
-### Math
-
-Wowchemy supports a Markdown extension for $\LaTeX$ math. You can enable this feature by toggling the `math` option in your `config/_default/params.yaml` file.
-
-To render _inline_ or _block_ math, wrap your LaTeX math with `{{</* math */>}}$...${{</* /math */>}}` or `{{</* math */>}}$$...$${{</* /math */>}}`, respectively. (We wrap the LaTeX math in the Wowchemy _math_ shortcode to prevent Hugo rendering our math as Markdown. The _math_ shortcode is new in v5.5-dev.)
-
-Example **math block**:
-
-```latex
-{{</* math */>}}
-$$
-\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}
-$$
-{{</* /math */>}}
-```
-
-renders as
-
-{{< math >}}
-$$\gamma_{n} = \frac{ \left | \left (\mathbf x_{n} - \mathbf x_{n-1} \right )^T \left [\nabla F (\mathbf x_{n}) - \nabla F (\mathbf x_{n-1}) \right ] \right |}{\left \|\nabla F(\mathbf{x}_{n}) - \nabla F(\mathbf{x}_{n-1}) \right \|^2}$$
-{{< /math >}}
-
-Example **inline math** `{{</* math */>}}$\nabla F(\mathbf{x}_{n})${{</* /math */>}}` renders as {{< math >}}$\nabla F(\mathbf{x}_{n})${{< /math >}}.
-
-Example **multi-line math** using the math linebreak (`\\`):
-
-```latex
-{{</* math */>}}
-$$f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} & \text{if }k=1, \\
-1-p_{0}^{*} & \text{if }k=0.\end{cases}$$
-{{</* /math */>}}
-```
-
-renders as
-
-{{< math >}}
-
-$$
-f(k;p_{0}^{*}) = \begin{cases}p_{0}^{*} & \text{if }k=1, \\
-1-p_{0}^{*} & \text{if }k=0.\end{cases}
-$$
-
-{{< /math >}}
-
-### Diagrams
-
-Wowchemy supports a Markdown extension for diagrams. You can enable this feature by toggling the `diagram` option in your `config/_default/params.toml` file or by adding `diagram: true` to your page front matter.
-
-An example **flowchart**:
-
-    ```mermaid
-    graph TD
-    A[Hard] -->|Text| B(Round)
-    B --> C{Decision}
-    C -->|One| D[Result 1]
-    C -->|Two| E[Result 2]
-    ```
-
-renders as
-
-```mermaid
-graph TD
-A[Hard] -->|Text| B(Round)
-B --> C{Decision}
-C -->|One| D[Result 1]
-C -->|Two| E[Result 2]
-```
-
-An example **sequence diagram**:
-
-    ```mermaid
-    sequenceDiagram
-    Alice->>John: Hello John, how are you?
-    loop Healthcheck
-        John->>John: Fight against hypochondria
-    end
-    Note right of John: Rational thoughts!
-    John-->>Alice: Great!
-    John->>Bob: How about you?
-    Bob-->>John: Jolly good!
-    ```
-
-renders as
-
-```mermaid
-sequenceDiagram
-Alice->>John: Hello John, how are you?
-loop Healthcheck
-    John->>John: Fight against hypochondria
-end
-Note right of John: Rational thoughts!
-John-->>Alice: Great!
-John->>Bob: How about you?
-Bob-->>John: Jolly good!
-```
-
-An example **Gantt diagram**:
-
-    ```mermaid
-    gantt
-    section Section
-    Completed :done,    des1, 2014-01-06,2014-01-08
-    Active        :active,  des2, 2014-01-07, 3d
-    Parallel 1   :         des3, after des1, 1d
-    Parallel 2   :         des4, after des1, 1d
-    Parallel 3   :         des5, after des3, 1d
-    Parallel 4   :         des6, after des4, 1d
-    ```
-
-renders as
-
-```mermaid
-gantt
-section Section
-Completed :done,    des1, 2014-01-06,2014-01-08
-Active        :active,  des2, 2014-01-07, 3d
-Parallel 1   :         des3, after des1, 1d
-Parallel 2   :         des4, after des1, 1d
-Parallel 3   :         des5, after des3, 1d
-Parallel 4   :         des6, after des4, 1d
-```
-
-An example **class diagram**:
-
-    ```mermaid
-    classDiagram
-    Class01 <|-- AveryLongClass : Cool
-    Class03 *-- Class04
-    Class05 o-- Class06
-    Class07 .. Class08
-    Class09 --> C2 : Where am i?
-    Class09 --* C3
-    Class09 --|> Class07
-    Class07 : equals()
-    Class07 : Object[] elementData
-    Class01 : size()
-    Class01 : int chimp
-    Class01 : int gorilla
-    Class08 <--> C2: Cool label
-    ```
-
-renders as
-
-```mermaid
-classDiagram
-Class01 <|-- AveryLongClass : Cool
-Class03 *-- Class04
-Class05 o-- Class06
-Class07 .. Class08
-Class09 --> C2 : Where am i?
-Class09 --* C3
-Class09 --|> Class07
-Class07 : equals()
-Class07 : Object[] elementData
-Class01 : size()
-Class01 : int chimp
-Class01 : int gorilla
-Class08 <--> C2: Cool label
-```
-
-An example **state diagram**:
-
-    ```mermaid
-    stateDiagram
-    [*] --> Still
-    Still --> [*]
-    Still --> Moving
-    Moving --> Still
-    Moving --> Crash
-    Crash --> [*]
-    ```
-
-renders as
-
-```mermaid
-stateDiagram
-[*] --> Still
-Still --> [*]
-Still --> Moving
-Moving --> Still
-Moving --> Crash
-Crash --> [*]
-```
-
-### Todo lists
-
-You can even write your todo lists in Markdown too:
-
-```markdown
-- [x] Write math example
-  - [x] Write diagram example
-- [ ] Do something else
-```
-
-renders as
-
-- [x] Write math example
-  - [x] Write diagram example
-- [ ] Do something else
-
-### Tables
-
-Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
-
-
-
-renders as
-
-
-### Callouts
-
-Academic supports a [shortcode for callouts](https://docs.hugoblox.com/content/writing-markdown-latex/#callouts), also referred to as _asides_, _hints_, or _alerts_. By wrapping a paragraph in `{{%/* callout note */%}} ... {{%/* /callout */%}}`, it will render as an aside.
-
-```markdown
-{{%/* callout note */%}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{%/* /callout */%}}
-```
-
-renders as
-
-{{% callout note %}}
-A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
-{{% /callout %}}
-
-### Spoilers
-
-Add a spoiler to a page to reveal text, such as an answer to a question, after a button is clicked.
-
-```markdown
-{{</* spoiler text="Click to view the spoiler" */>}}
-You found me!
-{{</* /spoiler */>}}
-```
-
-renders as
-
-{{< spoiler text="Click to view the spoiler" >}} You found me! {{< /spoiler >}}
-
-### Icons
-
-Academic enables you to use a wide range of [icons from _Font Awesome_ and _Academicons_](https://docs.hugoblox.com/getting-started/page-builder/#icons) in addition to [emojis](https://docs.hugoblox.com/content/writing-markdown-latex/#emojis).
-
-Here are some examples using the `icon` shortcode to render icons:
-
-```markdown
-{{</* icon name="terminal" pack="fas" */>}} Terminal  
-{{</* icon name="python" pack="fab" */>}} Python  
-{{</* icon name="r-project" pack="fab" */>}} R
-```
-
-renders as
-
-{{< icon name="terminal" pack="fas" >}} Terminal  
-{{< icon name="python" pack="fab" >}} Python  
-{{< icon name="r-project" pack="fab" >}} R
+We can also see which features has been determinant to classify the wines by plotting the **feature_importances_** of the classifier I named **clf**.
+![png](importance_features.png)
+
+From the table, the chlorides and the total amount of sulfure dioxide are the best features to separate the white from the red wines. 
+
+## Visualization of one tree
+
+As you have maybe noticed in the definition of the classifier, I specified the argument **max_depth** to **None**. This means that the tree continues to grow until all leaves are pure, meaning the leaf will only have labels if you choose "default" for the min_samples_leaf (= 1).
+
+One tree among others will look like that:
+
+![png](tree_10depth.png)
+
+Of course, you can also reduce the legnth of the trees by defining a depth value (max_depth = 5): 
+![png](tree_5depth.png)
+
+
+**Why changing the depth of the tree?**
+
+- In general, the deeper you let the tree grow, the more complex your model will become, capturing more information about the data. This can lead to **overfitting**. Indeed, our model will fit the training data perfectly and won't be able to generalize well over the data set. Consequently, if our model is overfitted, reducing the number of max_depth is a way of combating overfitting.
+
+- On the other hand, it's not a good idea to have a very low depth either, as our model won't adapt sufficiently: this would be a case of **underfitting**. 
+
+What I usually do is let the model decide on the maximum depth first, then, by comparing training and test results, I decrease or increase the maximum depth.
+
+## Results of the classification
+
+### Accuracy: First validation
+
+It is time now to evaluate our algorithm on the test set. The aim here is to compare the wine color predicted by the model with the ones observed in our test sample. The first indicator used is the percentage of well classified wines, also known as "accuracy".
+
+The **accuracy** or percentage of well classified wine is about **99.44 %**.
+
+### Confusion Matrix: Second validation
+
+To get a more precise idea of the errors made by the algorithm, the confusion matrix can be represented as follows
+
+![png](confusion_matrix.png)
+
+4 white wines have been predicted as red wines and 7 red have been placed in the white category.
+
+
+## Conclusions
+
+The Random Forest Classifier :
+  - Reduces overfitting in decision trees
+  - Works well with categorical and continuous variables!!
+  - Improve the accuracy 
+
+But:
+  - Using a RFC can also cost a lost in term of time computation depending of the number of features
+  - The trees can be really difficult to interpret and are seens as "black-box" if they are really long
+
+
+
 
 ### Did you find this page helpful? Consider sharing it 🙌

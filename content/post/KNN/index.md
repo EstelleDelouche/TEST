@@ -4,7 +4,7 @@ date: '2023-11-23'
 summary: Number recognition with the K-nn classifier!
 image:
   placement: 2
-  caption: 'Image credit: Estelle Delouche'
+  caption: 'Image credit: Torino Italy Cinema Museum - Estelle Delouche'
 ---
 
 # Objective

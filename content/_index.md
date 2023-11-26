@@ -17,6 +17,14 @@ sections:
       banner:
         # Upload your cover image to the `assets/media/` folder and reference it here
         filename: kalen-emsley-Bkci_8qcdvQ-unsplash.jpg
+  - block: skills
+    content:
+      title: Skills & Hobbies
+      username: admin
+  - block: languages
+    content:
+      title: Languages
+      username: admin
   - block: experience
     content:
       username: admin
@@ -24,10 +32,7 @@ sections:
       # Hugo date format
       date_format: 'January 2006'
       is_education_first: false
-  - block: skills
-    content:
-      title: Skills & Hobbies
-      username: admin
+
   - block: awards
     content:
       title: Scientific Blog
@@ -73,9 +78,6 @@ sections:
         exclude_featured: false
     design:
       columns: '2'
-  - block: languages
-    content:
-      title: Languages
-      username: admin
+
   
 ---

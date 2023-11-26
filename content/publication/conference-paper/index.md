@@ -6,18 +6,17 @@ title: 'Seasonal seismic velocity variations measured using seismic noise autoco
 # and it will be replaced with their full name and linked to their profile.
 authors:
   - admin
-  - Laurent Stehly
+
 
 # Author notes (optional)
 author_notes:
-  - 'Investigation, Methodology, Writing'
-  - 'Funding, Supervision, Writing'
+
 
 date: '2023-11-23T00:00:00Z'
-doi: '10.1029/2023JB026759'
+doi: ''
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2023-11-26T22:15:00Z'
+publishDate: '2023-11-26T00:00:00Z'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).
@@ -31,7 +30,7 @@ publication_short: In JGR
 abstract: Monitoring the evolution of groundwater resources is an issue for the twenty-first century. The expansion of agricultural land, urbanization and tourism are depleting aquifers. In this study, we propose to monitor groundwater reservoirs from the evolution of seismic wave velocity. The results obtained in Greece indicate that in several regions, the seismic wave velocity varies according to an annual cycle mainly controlled by aquifer loading and discharge. Hence by using continuous seismic noise records it is possible to track the evolution of aquifers over time and to distinguish shallow (∼100 m) from deep aquifers (∼1 km). Finally, we study the effect of water pumping from groundwater reservoirs. To that end, we combine GPS surface deformation measurements with seismic velocity variations. The results indicate that confined and unconfined aquifers respond differently. While for unconfined aquifers, pumping water implies an uplift of the surface, we show that for confined aquifers a subsidence occurs, due to the consolidation of the sediments at depth. While for unconfined aquifers, these surface variations are transient, the drainage of confined aquifers due to pumping is permanent.
 
 # Summary. An optional shortened abstract.
-# summary: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis posuere tellus ac convallis placerat. Proin tincidunt magna sed ex sollicitudin condimentum.
+summary: Monitoring groundwater reservoirs from the evolution of seismic wave velocity in Greece
 
 tags: [Monitoring, Big Data, Aquifer, Seismology]
 
@@ -64,24 +63,18 @@ image:
 #   Simply enter your project's folder or file name without extension.
 #   E.g. `internal-project` references `content/project/internal-project/index.md`.
 #   Otherwise, set `projects: []`.
-# projects:
-#   - example
+projects:
+   - example
 
 # Slides (optional).
 #   Associate this publication with Markdown slides.
 #   Simply enter your slide deck's filename without extension.
 #   E.g. `slides: "example"` references `content/slides/example/index.md`.
 #   Otherwise, set `slides: ""`.
-# slides: example
+slides: example
 ---
-<!-- 
-{{% callout note %}}
-Click the _Cite_ button above to demo the feature to enable visitors to import publication metadata into their reference management software.
-{{% /callout %}}
 
-{{% callout note %}}
-Create your slides in Markdown - click the _Slides_ button to check out the example.
-{{% /callout %}} -->
+
 
 
 Monitoring the evolution of groundwater resources is an issue for the twenty-first century. The expansion of agricultural land, urbanization and tourism are depleting aquifers. In this study, we propose to monitor groundwater reservoirs from the evolution of seismic wave velocity. The results obtained in Greece indicate that in several regions, the seismic wave velocity varies according to an annual cycle mainly controlled by aquifer loading and discharge. Hence, by using continuous seismic noise records it is possible to track the evolution of aquifers over time and to distinguish shallow (∼100 m) from deep aquifers (∼1 km). Finally, we study the effect of water pumping from groundwater reservoirs. To that end, we combine GPS surface deformation measurements with seismic velocity variations. The results indicate that confined and unconfined aquifers respond differently. While for unconfined aquifers, pumping water implies an uplift of the surface, we show that for confined aquifers a subsidence occurs, due to the consolidation of the sediments at depth. While for unconfined aquifers, these surface variations are transient, the drainage of confined aquifers due to pumping is permanent.

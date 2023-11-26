@@ -17,7 +17,7 @@ date: '2023-11-23T00:00:00Z'
 doi: '10.1029/2023JB026759'
 
 # Schedule page publish date (NOT publication's date).
-publishDate: '2023-11-23T00:00:00Z'
+publishDate: '2023-11-26T22:15:00Z'
 
 # Publication type.
 # Accepts a single type but formatted as a YAML list (for Hugo requirements).

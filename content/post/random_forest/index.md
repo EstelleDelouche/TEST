@@ -7,7 +7,8 @@ image:
   caption: 'Image credit: Estelle Delouche'
 ---
 
-Hugo Blox Builder is designed to give technical content creators a seamless experience. You can focus on the content and Wowchemy handles the rest.
+Random Forest is based on binary decision trees. A decision tree is a graphical visualization in the form of a treea series of decisions / possibilities. A Random Forest makes it possible to give a probability to each decision: by knowing the probability at each node of the tree, it is possible to calculate a probability for each result, each "path" followed by the tree (Fig.18). The objective is to be able to make a prediction on new data in order to assign them a membership (a class) by knowing only the modalities of the features. Our machine learning model will build a decision tree based on existing data, assigning a probability to each path/exit point combination. For example, and randomly, if the probability of following a certain path is 80% for label ‘C’, each observation that follows this path
+will be assigned this label (majority voting). It is a simple algorithm to implement, in the sense that a Random Forest combines regression and classification. There is also less chance of overfitting.
 
 **Highlight your code snippets, take notes on math classes, and draw diagrams from textual representation.**
 
@@ -25,7 +26,7 @@ Wowchemy supports a Markdown extension for highlighting code syntax. You can cus
 
     ```python
     import pandas as pd
-    data = pd.read_csv("data.csv")
+  
     data.head()
     ```
 
@@ -33,7 +34,7 @@ renders as
 
 ```python
 import pandas as pd
-data = pd.read_csv("data.csv")
+
 data.head()
 ```
 
@@ -335,13 +336,10 @@ renders as
 
 Save your spreadsheet as a CSV file in your page's folder and then render it by adding the _Table_ shortcode to your page:
 
-```go
-{{</* table path="results.csv" header="true" caption="Table 1: My results" */>}}
-```
+
 
 renders as
 
-{{< table path="results.csv" header="true" caption="Table 1: My results" >}}
 
 ### Callouts
 

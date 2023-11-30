@@ -54,7 +54,7 @@ url_video: 'https://youtube.com'
 # Featured image
 # To use, add an image named `featured.jpg/png` to your page's folder.
 image:
-  caption: 'Image credit: [**Estelle Delouche**](https://github.com/EstelleDelouche/dvv_Greece/blob/main/jgrb56535.pdf)'
+  caption: 'Image credit: [**Estelle Delouche**]([https://github.com/EstelleDelouche/dvv_Greece/blob/main/jgrb56535.pdf](https://agupubs.onlinelibrary.wiley.com/doi/epdf/10.1029/2023JB026759))'
   focal_point: ''
   preview_only: false
 

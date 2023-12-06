@@ -47,7 +47,7 @@ locale:
 features:
   syntax_highlighter:
     theme_light: github-light
-    theme_dark: github-dark
+    theme_dark: api
   math:
     enable: false
   privacy_pack:

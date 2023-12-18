@@ -107,13 +107,13 @@ work:
     date_start: ''
     date_end: ''
     summary: |
-      Image recognition with ML (January 2019 - July 2019): In collaboration with [Marielle Malfante](https://www.linkedin.com/in/marielle-malfante-214a9688/?originalSubdomain=fr), [Jerome Mars](https://www.linkedin.com/in/jerome-mars-59049353/?originalSubdomain=fr) and [Mauro Dalla Mura](https://www.grenoble-inp.fr/fr/recherche-valorisation/mauro-dalla-mura-nouveau-membre-de-liuf)
-      - utilisation of a machine learning-based automated system to discriminate the resting, precursory and post-seismic phases of an earthquake (AAA Codes Malfante et at.2018)
-      - time series and images recognition
+      Image recognition with ML (January 2019 - July 2019): Supervised by [Laurent Stehly](https://scholar.google.com/citations?user=VeMpdccAAAAJ&hl=fr). In collaboration with [Marielle Malfante](https://www.linkedin.com/in/marielle-malfante-214a9688/?originalSubdomain=fr), [Jerome Mars](https://www.linkedin.com/in/jerome-mars-59049353/?originalSubdomain=fr) and [Mauro Dalla Mura](https://www.grenoble-inp.fr/fr/recherche-valorisation/mauro-dalla-mura-nouveau-membre-de-liuf)
+      - utilisation of a machine learning-based automated system to discriminate the resting, precursory, and post-seismic phases of an earthquake (AAA Codes Malfante et at.2018)
+      - time series and image recognition
 
 
       Statistical study of earthquake signals (May 2018 - June 2018):
-      - Characterization of the co-seismic impact of noise recordings for l'Aquila and Amatrice earthquakes using statitical moments
+      - Characterization of the co-seismic impact of noise recordings for l'Aquila and Amatrice earthquakes using statistical moments
 
       Co-seismic deformation (December 2016 - January 2017)
       - Evaluation of the co-seismic displacement of submarines area during Pedernales event

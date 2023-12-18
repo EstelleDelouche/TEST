@@ -107,8 +107,8 @@ work:
     date_start: ''
     date_end: ''
     summary: |
-      Image recognition with ML (January 2019 - July 2019): Supervised by [Marielle Malfante](https://www.linkedin.com/in/marielle-malfante-214a9688/?originalSubdomain=fr), [Jerome Mars](https://www.linkedin.com/in/jerome-mars-59049353/?originalSubdomain=fr) and [Mauro Dalla Mura](https://www.grenoble-inp.fr/fr/recherche-valorisation/mauro-dalla-mura-nouveau-membre-de-liuf)
-      - creation of a machine learning-based automated system to discriminate the resting, precursory and post-seismic phases of an earthquake 
+      Image recognition with ML (January 2019 - July 2019): In collaboration with [Marielle Malfante](https://www.linkedin.com/in/marielle-malfante-214a9688/?originalSubdomain=fr), [Jerome Mars](https://www.linkedin.com/in/jerome-mars-59049353/?originalSubdomain=fr) and [Mauro Dalla Mura](https://www.grenoble-inp.fr/fr/recherche-valorisation/mauro-dalla-mura-nouveau-membre-de-liuf)
+      - utilisation of a machine learning-based automated system to discriminate the resting, precursory and post-seismic phases of an earthquake (AAA Codes Malfante et at.2018)
       - time series and images recognition
 
 
